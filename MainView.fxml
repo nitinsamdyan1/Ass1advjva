@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.studentmanager.controllers.MainController">
+    <TableView fx:id="studentTable">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" />
+            <TableColumn fx:id="nameColumn" text="Name" />
+            <TableColumn fx:id="emailColumn" text="Email" />
+            <TableColumn fx:id="majorColumn" text="Major" />
+        </columns>
+    </TableView>
+    <GridPane>
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+        <vgap>10</vgap>
+        <hgap>10</hgap>
+        <Label text="ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="idField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label text="Major:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="majorField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    </GridPane>
+    <HBox spacing="10">
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+        <Button text="Add" fx:id="addButton" />
+        <Button text="Update" fx:id="updateButton" />
+        <Button text="Delete" fx:id="deleteButton" />
+    </HBox>
+</VBox>
